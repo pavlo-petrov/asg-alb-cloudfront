@@ -1,0 +1,29 @@
+# name: create 3 web servers in 3 az
+# run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+# on:
+#     push:
+#       branches:
+#         - main
+#         - dev 
+
+# jobs:
+#     build_docker_ring_ring:
+#       runs-on: ubuntu-latest
+  
+#       steps:
+#        - name: Checkout repository
+#          uses: actions/checkout@v3
+  
+#        - name: Login to Docker Hub
+#          uses: docker/login-action@v3
+#          with:
+#            username: ${{ secrets.DOCKER_USERNAME }}
+#            password: ${{ secrets.DOCKER_PASSWORD }}
+  
+#        - name: Build and push Docker image
+#          run: |
+#            pwd
+#            ls -ax
+#            docker build -t pavlopetrovua/node-for-rebiuld-lab:0.1 .
+#            pwd
+#            docker push pavlopetrovua/node-for-rebiuld-lab:0.1
